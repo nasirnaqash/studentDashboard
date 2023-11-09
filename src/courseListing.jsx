@@ -30,17 +30,30 @@ const CourseListing = () => {
 
   return (
     <div className="listing">
-      <h1>Course Listing</h1>
-      <input
-        type="text"
-        placeholder="Search by course name or instructor"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
-      <button onClick={handleSearch}>Search</button>
+      <div className="navbar">
+        <h1>Course Listing</h1>
+        <div className="allS">
+          <button onClick={handleShowStudents} className="button-27">
+            All Students
+          </button>
+        </div>
+
+        <div className="search">
+          <input
+            type="text"
+            placeholder="Search by course name or instructor"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          <button className="button-27" onClick={handleSearch}>
+            Search
+          </button>
+        </div>
+      </div>
+
       <ul className="course-list">
         {courses.map((course) => (
-          <li className={`listing-${course.id}`} key={course.id}>
+          <li className={`listing-${course.id} list `} key={course.id}>
             <div className="courses-container">
               <div className="course">
                 <div className="course-preview">
@@ -52,7 +65,7 @@ const CourseListing = () => {
                   <h2>{course.instructor}</h2>
                   <Link to={`/course/${course.id}`}>
                     {" "}
-                    <button className="btn">Continue</button>
+                    <button className="button-27">Continue</button>
                   </Link>
                 </div>
               </div>
@@ -60,10 +73,6 @@ const CourseListing = () => {
           </li>
         ))}
       </ul>
-
-      <button onClick={handleShowStudents} className="">
-        All Students
-      </button>
       {showStudents ? <AllStudentsList /> : " "}
     </div>
   );

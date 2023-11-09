@@ -17,13 +17,11 @@ const AllStudentsList = () => {
 
   return (
     <div className="students">
-      <ul>
+      <ul className="course-list">
         {allStudents.map((student) => (
-          <li key={student.id}>
+          <li className="std" key={student.id}>
             <a href={`/dashboard/${student.id}`}>
-              <button>
-                {student.name} - {student.email}
-              </button>
+              <button className="button-27">{student.name}</button>
             </a>
           </li>
         ))}

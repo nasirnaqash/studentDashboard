@@ -76,6 +76,11 @@ const courseData = [
         name: "Diana Johnson",
         email: "diana@example.com",
       },
+      {
+        id: 2,
+        name: "Bob Smith",
+        email: "bob@example.com",
+      },
       // Additional enrolled students...
     ],
   },

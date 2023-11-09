@@ -16,25 +16,27 @@ const CourseDetails = () => {
 
   return (
     <div>
-      <div className="courses-container">
+      <div className="listing">
         <div className="course">
-          <div className="course-preview">
-            <h6>Course</h6>
-            <h2>{course.name}</h2>
+          <div className="navbar">
+            {" "}
+            <h1>Course Details</h1>
           </div>
-          <div className="course-info">
-            <h2>{course.instructor}</h2>
-            <h6>{course.description}</h6>
-            <h5>Course Duration: {course.duration}</h5>
-            <h5>Enrollment Status: {course.enrollmentStatus}</h5>
-            <h6>Students Enrolled: {course.students.length}</h6>
-            <button onClick={handleGoBack} className="btn">
-              Go Back
-            </button>
+          <div className="course-preview">
+            <div className="course-info">
+              <h2>{course.name}</h2>
+              <h3>{course.instructor}</h3>
+              <h6>{course.description}</h6>
+              <h5>Course Duration: {course.duration}</h5>
+              <h5>Enrollment Status: {course.enrollmentStatus}</h5>
+              <h6>Students Enrolled: {course.students.length}</h6>
+              <button onClick={handleGoBack} className="button-27">
+                Go Back
+              </button>
+            </div>
           </div>
         </div>
       </div>
-      <h6>Course Schedule: </h6>
     </div>
   );
 };
