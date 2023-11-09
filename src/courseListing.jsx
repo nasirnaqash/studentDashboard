@@ -56,7 +56,7 @@ const CourseListing = () => {
           <li className={`listing-${course.id} list `} key={course.id}>
             <div className="courses-container">
               <div className="course">
-                <div className="course-preview">
+                <div className="">
                   <h6>Course</h6>
                   <h2>{course.name}</h2>
                 </div>
